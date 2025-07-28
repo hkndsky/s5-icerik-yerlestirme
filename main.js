@@ -18,3 +18,9 @@ imgList.forEach((el) => {
 });
 imgList[2].setAttribute("src", siteContent.images["accent-img"]);
 /* img tagleri src değerlerini aldı.*/
+
+const ctaTittleTag = document.querySelector(".cta-text h1");
+const ctaButton = document.querySelector(".cta-text button");
+
+ctaTittleTag.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
