@@ -57,3 +57,6 @@ for (let i = 0; i < contactTexts.length; i++) {
 }
 
 /* contact kısmı dolduruldu. */
+const htmlFooterText = document.querySelector("footer a");
+htmlFooterText.textContent = siteContent["footer"].copyright;
+htmlFooterText.classList.add("bold");
