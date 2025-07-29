@@ -9,6 +9,7 @@ const navList = document.querySelectorAll("header nav a");
 for (let i = 0; i < navList.length; i++) {
   navList[i].id = "nav-item-" + (i + 1);
   navList[i].textContent = siteContent.nav[navList[i].id];
+  navList[i].classList.add("italic");
 }
 
 const imgList = document.querySelectorAll("img");
@@ -32,3 +33,17 @@ for (let i = 0; i < contents.length; i++) {
   contents[i].id = topContent[i][0];
   contents[i].textContent = topContent[i][1];
 }
+
+/* Top content dolduruldu. */
+
+const bottomContent = Object.entries(siteContent["bottom-content"]);
+const bottomTexts = document.querySelectorAll(
+  ".bottom-content .text-content > *"
+);
+
+for (let i = 0; i < bottomTexts.length; i++) {
+  bottomTexts[i].id = bottomContent[i][0];
+  bottomTexts[i].textContent = bottomContent[i][1];
+}
+
+/* bottom content dolduruldu. */
