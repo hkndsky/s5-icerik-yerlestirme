@@ -24,3 +24,11 @@ const ctaButton = document.querySelector(".cta-text button");
 
 ctaTittleTag.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
+
+const topContent = Object.entries(siteContent["top-content"]);
+const contents = document.querySelectorAll(".top-content .text-content > *");
+
+for (let i = 0; i < contents.length; i++) {
+  contents[i].id = topContent[i][0];
+  contents[i].textContent = topContent[i][1];
+}
