@@ -47,3 +47,13 @@ for (let i = 0; i < bottomTexts.length; i++) {
 }
 
 /* bottom content dolduruldu. */
+
+const contactContent = Object.entries(siteContent["contact"]);
+const contactTexts = document.querySelectorAll(".contact > *");
+
+for (let i = 0; i < contactTexts.length; i++) {
+  contactTexts[i].id = contactContent[i][0];
+  contactTexts[i].textContent = contactContent[i][1];
+}
+
+/* contact kısmı dolduruldu. */
